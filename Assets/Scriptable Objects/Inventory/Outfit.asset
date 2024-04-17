@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54aaad641e5c4df4e82621abb12dad67, type: 3}
+  m_Name: Outfit
+  m_EditorClassIdentifier: 
+  savePath: /outfit.Save
+  database: {fileID: 11400000, guid: 0903046ee913d0942b5ea22f95078e4f, type: 2}
+  type: 1
+  Container:
+    Slots:
+    - AllowedItems: 00000000
+      item:
+        Name: 
+        Id: -1
+        buffs: []
+      amount: 0
+    - AllowedItems: 01000000
+      item:
+        Name: 
+        Id: -1
+        buffs: []
+      amount: 0
+    - AllowedItems: 02000000
+      item:
+        Name: 
+        Id: -1
+        buffs:
+        - attribute: 0
+          value: 18
+          min: 1
+          max: 50
+        - attribute: 1
+          value: 23
+          min: 1
+          max: 40
+        - attribute: 2
+          value: 10
+          min: 1
+          max: 50
+        - attribute: 3
+          value: 6
+          min: 1
+          max: 20
+      amount: 1
+    - AllowedItems: 04000000
+      item:
+        Name: 
+        Id: -1
+        buffs: []
+      amount: 0
