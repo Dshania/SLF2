@@ -5,13 +5,17 @@ using UnityEngine;
 public class Food : MonoBehaviour
 {
     public BoxCollider2D gridArea;
+    [SerializeField] AudioClip[] biteSounds;
+    public AudioSource biteSFX;
 
     private void Start()
     {
         RandomPosition();
+        biteSFX = GetComponent<AudioSource>();
     }
     private void RandomPosition()
     {
+        RandomSound();
         Bounds bounds = this.gridArea.bounds;
 
         float x = Random.Range(bounds.min.x, bounds.max.x);
@@ -30,5 +34,11 @@ public class Food : MonoBehaviour
         {
             RandomPosition();
         }
+    }
+
+    public void RandomSound()
+    {
+      AudioClip clip = biteSounds[UnityEngine.Random.Range(0, biteSounds.Length)];
+        biteSFX.PlayOneShot(clip);
     }
 }

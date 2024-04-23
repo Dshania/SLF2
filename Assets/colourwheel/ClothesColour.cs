@@ -3,17 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using static UnityEditor.Progress;
 
 
 public class ClothesColour : MonoBehaviour, IPointerClickHandler
 {
     public Color output;
-  //  public ClothesSelect cs;
-
-    private void Start()
-    {
-        
-    }
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -33,17 +28,26 @@ public class ClothesColour : MonoBehaviour, IPointerClickHandler
 
     public void Update()
     {
-        GameObject[] clothes = GameObject.FindGameObjectsWithTag("Clothes");
+/*        GameObject clothes = GameObject.FindGameObjectWithTag("Clothes");
         //("New Game Object");
-/*        if(cs.isSelected == true)
-        {
+        *//*        if(cs.isSelected == true)
+                {
 
-        }*/
-        foreach (GameObject item in clothes)
-        {
-            SkinnedMeshRenderer mr = item.GetComponent<SkinnedMeshRenderer>();
-            mr.material.color = output;
-        }
-        
+                }*/
+        /*        foreach (GameObject item in clothes)
+                {
+                    SkinnedMeshRenderer mr = item.GetComponent<SkinnedMeshRenderer>();
+                    mr.material.color = output;
+                }*//*
+
+        SkinnedMeshRenderer mr = clothes.GetComponent<SkinnedMeshRenderer>();
+        mr.material.color = output;*/
+    }
+
+    public void changeColour()
+    {
+        GameObject clothes = GameObject.FindGameObjectWithTag("Clothes");
+        SkinnedMeshRenderer mr = clothes.GetComponent<SkinnedMeshRenderer>();
+        mr.material.color = output;
     }
 }

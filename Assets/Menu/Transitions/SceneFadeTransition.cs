@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class SceneFadeTransition : MonoBehaviour
 {
     public Animator transition;
+    private void Start()
+    {
+        gameObject.SetActive(true);
+    }
     public void Next()
     {
         StartCoroutine(fadeTransition(SceneManager.GetActiveScene().buildIndex + 1));

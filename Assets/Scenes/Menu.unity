@@ -1991,7 +1991,11 @@ MonoBehaviour:
 
 
     -
-    Sounds and music from Pixabay'
+    Sounds and music from Pixabay
+
+
+    - shader object select outline ''Qucik Outline''
+    by Chris nolet from unity store'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1da1196bc55de4042b6a7a08dd2ae24b, type: 2}
   m_sharedMaterial: {fileID: 7190277710993036245, guid: 1da1196bc55de4042b6a7a08dd2ae24b, type: 2}
@@ -16687,6 +16691,10 @@ PrefabInstance:
     - target: {fileID: 8005279740842773466, guid: 86373adc7403528418a18578807e953e, type: 3}
       propertyPath: m_Name
       value: CrossFade 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8005279740842773466, guid: 86373adc7403528418a18578807e953e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8242310542403785241, guid: 86373adc7403528418a18578807e953e, type: 3}
       propertyPath: m_Pivot.x

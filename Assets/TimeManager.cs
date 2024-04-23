@@ -1,49 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class TimeManager : MonoBehaviour
 {
-    [SerializeField]
-    GameObject[] gameObjects;
+    [SerializeField] GameObject pannel;
+    [SerializeField] Image clockIMG;
+    [SerializeField] TMP_Text timeTXT;
+    [SerializeField] float totalTime;
+    [SerializeField] float currentTime;
 
-    //public float _Fill_Height;
-
-    public Color fillColour;
-    public Color defaultColour;
-    public float LevelTime;
-
-    private Material fillMaterial;
-
-
-    void Start()
+    private void Start()
     {
-        fillMaterial = GetComponent<Renderer>().material;
-        TimeUpdate(LevelTime);
-    }
-    void Update()
-    {
-        LevelTime -= Time.deltaTime;
-        if (LevelTime < 0)
-        {
-            LevelTime = 0;
-        }
- /*       if (LevelTime < 0)
-        {
-          
-        }
-       else if (LevelTime > 0)
-        {
-            LevelTime = 0;
-    GameOver();
-        }*/
+        pannel.SetActive(false);
+        currentTime = totalTime;
+        timeTXT.text = currentTime.ToString();
+        StartCoroutine(Timer());
     }
 
-    public void TimeUpdate(float TimeValue)
+    IEnumerator Timer()
     {
-        foreach (GameObject go in gameObjects)
+        while (currentTime >= 0)
         {
-            fillMaterial.SetFloat("_Fill_Height", TimeValue);
+            clockIMG.fillAmount = Mathf.InverseLerp(0, totalTime, currentTime);
+            timeTXT.text = currentTime.ToString();
+            yield return new WaitForSeconds(1);
+            currentTime--;
         }
+        OpenPannel();
+    }
+
+    void OpenPannel()
+    {
+        timeTXT.text = "";
+        pannel.SetActive(true);
     }
 }

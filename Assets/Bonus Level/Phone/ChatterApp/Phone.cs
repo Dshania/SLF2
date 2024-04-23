@@ -42,7 +42,7 @@ public class Phone : MonoBehaviour
         bonusPoints.text = "Likes + " + (points.ToString());
         canSendTXT = false;
 
-        PlayerPrefs.SetFloat("TotalScore", points);
+        PlayerPrefs.SetFloat("ChatterApp", points);
 
         yield return new WaitForSeconds(3f);
         ChatterApp.SetActive(false);

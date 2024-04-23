@@ -11,7 +11,7 @@ public class MeshCombiner
     public readonly Dictionary<int, Transform> _RootBoneDictionary = new Dictionary<int, Transform>();
     private readonly Transform[] _boneTransforms = new Transform[67];
     private readonly Transform _transform;
-
+    public Outline outline;
     //private const string ClothesString = "clothes";
     static string tagClothes = "Clothes";
 
@@ -27,6 +27,10 @@ public class MeshCombiner
     {
         var limb = ProcessBonedObject(boneObj.GetComponentInChildren<SkinnedMeshRenderer>(), boneNames);
         limb.SetParent(_transform);
+
+        limb.localPosition = boneObj.transform.localPosition;
+        limb.localRotation = boneObj.transform.localRotation;
+        limb.localScale = boneObj.transform.localScale;
 
         limb.tag = tagClothes;
         
@@ -46,16 +50,17 @@ public class MeshCombiner
            // _boneTransforms[i] = _RootBoneDictionary[bones[i].name.GetHashCode()];
         }
 
-        SphereCollider collider = bonedObject.AddComponent<SphereCollider>();
-        collider.radius = 2;
-      
-       /* var bounds = meshRenderer.bounds;
-        meshRenderer.transform.position = bounds.center;
-        collider.radius = bounds.extents.x;*/
+        //SphereCollider collider = bonedObject.AddComponent<SphereCollider>();
+        //collider.radius = 2;
 
+        BoxCollider collider = bonedObject.AddComponent<BoxCollider>();
+        collider.center = renderer.bounds.center;
+        collider.size = renderer.bounds.size;
 
-      //  collider.transform.position = _boneTransforms;
-       // collider.sharedMesh = renderer.sharedMesh;
+       // bonedObject.AddComponent<Outline>();
+
+        outline = bonedObject.AddComponent<Outline>();
+        outline.enabled = false;
 
         meshRenderer.bones = _boneTransforms;
         meshRenderer.sharedMesh = renderer.sharedMesh;

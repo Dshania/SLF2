@@ -11,9 +11,12 @@ public class BankApp : MonoBehaviour
     public TMP_Text balanceTXT;
     private float balance;
 
+    private LeaderBoard lb;
+
     private void Start()
     {
-        balance = PlayerPrefs.GetFloat("Scores");
+       // balance = PlayerPrefs.GetFloat("Scores");
+        balance = lb.totalScore;
         balance *= 1.3f;
     }
 

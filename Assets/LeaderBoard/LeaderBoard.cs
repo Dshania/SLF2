@@ -14,14 +14,17 @@ public class LeaderBoard : MonoBehaviour
     private List<Transform> HSEntryTransList;
     public int totalScore;
 
+    private TotalScore ts;
+
     public void Update()
     {
-        totalScore = ((int)PlayerPrefs.GetFloat("Scores") + (int)PlayerPrefs.GetFloat("TotalScore"));
+        totalScore = (int)PlayerPrefs.GetFloat("Scores") + (int)PlayerPrefs.GetFloat("ChatterApp"); /* (int)ts.level1Score (int)PlayerPrefs.GetFloat("Scores") + (int)PlayerPrefs.GetFloat("TotalScore");*/
     }
 
     private void Awake()
-    {      
-        totalScore = ((int)PlayerPrefs.GetFloat("Scores") + (int)PlayerPrefs.GetFloat("TotalScore"));
+    {
+        //totalScore = ((int)PlayerPrefs.GetFloat("Scores") + (int)PlayerPrefs.GetFloat("TotalScore"));
+        totalScore = (int)PlayerPrefs.GetFloat("Scores") + (int)PlayerPrefs.GetFloat("ChatterApp");
         HSTemplate.gameObject.SetActive(false);
 
         HSEntryList = new List<HSEntry>()
