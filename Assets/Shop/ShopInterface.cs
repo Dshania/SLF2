@@ -9,6 +9,7 @@ using UnityEngine.UI;
 
 public class ShopInterface : UserInterface
 {
+    public ItemViewer itemViewer;
     public GameObject ShopInventoryPrefab;
     public ItemDatabaesObject database;
     public int X_Start;
@@ -28,7 +29,7 @@ public class ShopInterface : UserInterface
             int id = inventory.Container.Slots[i].item.Id;
             obj.GetComponent<ShopItem>().LoadNewItem(database.ItemsObjects[id]);
 
-            obj.transform.GetComponent<Button>().onClick.AddListener(() => obj.GetComponent<ShopItem>().LoadClothes(database.ItemsObjects[id]));
+            obj.transform.GetComponent<Button>().onClick.AddListener(() => obj.GetComponent<ShopItem>().LoadClothes(database.ItemsObjects[id], itemViewer));
 
              AddEvent(obj, EventTriggerType.PointerEnter, delegate { OnEnter(obj); });
              AddEvent(obj, EventTriggerType.PointerExit, delegate { OnExit(obj); });
