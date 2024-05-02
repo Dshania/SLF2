@@ -9,6 +9,7 @@ using static UnityEditor.Progress;
 public class ClothesColour : MonoBehaviour, IPointerClickHandler
 {
     public Color output;
+    ClothesSelect cs;
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -28,26 +29,23 @@ public class ClothesColour : MonoBehaviour, IPointerClickHandler
 
     public void Update()
     {
-/*        GameObject clothes = GameObject.FindGameObjectWithTag("Clothes");
-        //("New Game Object");
-        *//*        if(cs.isSelected == true)
-                {
+  /*     GameObject[] clothes = GameObject.FindGameObjectsWithTag("Clothes");
 
-                }*/
-        /*        foreach (GameObject item in clothes)
+                foreach (GameObject item in clothes)
                 {
                     SkinnedMeshRenderer mr = item.GetComponent<SkinnedMeshRenderer>();
                     mr.material.color = output;
-                }*//*
+                }*/
 
-        SkinnedMeshRenderer mr = clothes.GetComponent<SkinnedMeshRenderer>();
-        mr.material.color = output;*/
+      //  SkinnedMeshRenderer mr = clothes.GetComponent<SkinnedMeshRenderer>();
+     //   mr.material.color = output;
+
     }
 
-    public void changeColour()
+    public void changeColour(Transform selection)
     {
-        GameObject clothes = GameObject.FindGameObjectWithTag("Clothes");
-        SkinnedMeshRenderer mr = clothes.GetComponent<SkinnedMeshRenderer>();
+       // GameObject clothes = GameObject.FindGameObjectWithTag("Clothes");
+        SkinnedMeshRenderer mr = selection.GetComponent<SkinnedMeshRenderer>();
         mr.material.color = output;
     }
 }

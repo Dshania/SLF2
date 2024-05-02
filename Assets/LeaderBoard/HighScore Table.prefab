@@ -668,6 +668,7 @@ MonoBehaviour:
   HSTemplate: {fileID: 8293442629161947105}
   templateHeight: 50
   totalScore: 0
+  scoreSystem: {fileID: 11400000, guid: a663c803b317d0c488455d8035d41359, type: 2}
 --- !u!1 &5777284462798553276
 GameObject:
   m_ObjectHideFlags: 0

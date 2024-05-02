@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Events;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class LeaderBoard : MonoBehaviour
 {
@@ -12,19 +13,13 @@ public class LeaderBoard : MonoBehaviour
 
     private List<HSEntry> HSEntryList;
     private List<Transform> HSEntryTransList;
-    public int totalScore;
+    public float totalScore;
 
-    private TotalScore ts;
-
-    public void Update()
-    {
-        totalScore = (int)PlayerPrefs.GetFloat("Scores") + (int)PlayerPrefs.GetFloat("ChatterApp"); /* (int)ts.level1Score (int)PlayerPrefs.GetFloat("Scores") + (int)PlayerPrefs.GetFloat("TotalScore");*/
-    }
+   public ScoreSystem scoreSystem;
 
     private void Awake()
     {
-        //totalScore = ((int)PlayerPrefs.GetFloat("Scores") + (int)PlayerPrefs.GetFloat("TotalScore"));
-        totalScore = (int)PlayerPrefs.GetFloat("Scores") + (int)PlayerPrefs.GetFloat("ChatterApp");
+        totalScore = scoreSystem.TotalScore;
         HSTemplate.gameObject.SetActive(false);
 
         HSEntryList = new List<HSEntry>()
@@ -127,7 +122,7 @@ public class LeaderBoard : MonoBehaviour
 
         scoreTransform.Find("RankTMP").GetComponent<TextMeshProUGUI>().text = rankString;
 
-        int score = HSEntry.score;
+        float score = HSEntry.score;
         scoreTransform.Find("NameTMP").GetComponent<TextMeshProUGUI>().text = score.ToString();
 
         string name = HSEntry.name;
@@ -158,7 +153,7 @@ public class LeaderBoard : MonoBehaviour
     [System.Serializable]
     private class HSEntry
     {
-        public int score;
+        public float score;
        
         public string name;
     }

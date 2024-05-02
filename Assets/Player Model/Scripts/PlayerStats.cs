@@ -16,6 +16,8 @@ public class PlayerStats : MonoBehaviour
     public TMP_Text scoreText;
     public float scoreTotal;
 
+    public ScoreSystem scoreSystem; 
+
    // public Animator particleAnimator;
     public ParticleSystem spiralPart;
     // public List<int> scoreList = new List<int>();
@@ -49,6 +51,8 @@ public class PlayerStats : MonoBehaviour
         PlayerPrefs.SetFloat("Scores", scoreTotal);
         PlayerPrefs.Save();
         // scoreList.Add((int)scoreTotal);
+        scoreSystem.levelScore = scoreTotal;
+        scoreSystem.TotalScore = scoreTotal;
 
     }
 

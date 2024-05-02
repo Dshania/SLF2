@@ -11487,6 +11487,8 @@ GameObject:
   - component: {fileID: 1187797477}
   - component: {fileID: 1187797479}
   - component: {fileID: 1187797478}
+  - component: {fileID: 1187797480}
+  - component: {fileID: 1187797481}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -11510,7 +11512,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 6.6}
+  m_AnchoredPosition: {x: 0, y: -31}
   m_SizeDelta: {x: 55, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1187797478
@@ -11535,15 +11537,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 000
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 062c2d3ee0195954c9869edc97175a02, type: 2}
-  m_sharedMaterial: {fileID: -7267792651917267402, guid: 062c2d3ee0195954c9869edc97175a02, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9bff47d052955964f96388bcd32e3a38, type: 2}
+  m_sharedMaterial: {fileID: 5754661313320654270, guid: 9bff47d052955964f96388bcd32e3a38, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4287072135
-  m_fontColor: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 1}
+    rgba: 4294177779
+  m_fontColor: {r: 0.9528302, g: 0.9528302, b: 0.9528302, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
@@ -11610,6 +11612,48 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187797476}
   m_CullTransparentMesh: 1
+--- !u!114 &1187797480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187797476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc040c6742f22724083270e8c7ce404c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveTime: 2
+  speed: 200
+  textMeshPro: {fileID: 1187797478}
+--- !u!50 &1187797481
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187797476}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!224 &1387947958 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2110243470697880454, guid: b886f5b6412a90f46b37480637f1159e, type: 3}
@@ -12593,6 +12637,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7932758442186163000, guid: b886f5b6412a90f46b37480637f1159e, type: 3}
+      propertyPath: scoreSystem
+      value: 
+      objectReference: {fileID: 11400000, guid: a663c803b317d0c488455d8035d41359, type: 2}
     - target: {fileID: 8365104476010092980, guid: b886f5b6412a90f46b37480637f1159e, type: 3}
       propertyPath: m_fontAsset
       value: 

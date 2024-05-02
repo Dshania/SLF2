@@ -19,6 +19,7 @@ public enum Attributes
     Theme2,
     Theme3,
     Theme4
+    //Price
 }
 [CreateAssetMenu(fileName = "New Item", menuName = "Inventory System/Clothes/item")]
 public class ItemObject : ScriptableObject
@@ -30,6 +31,7 @@ public class ItemObject : ScriptableObject
     [TextArea(15, 20)]
     public string description;
     public Item data = new Item();
+    public float price;
 
     public Transform prefabTransform;
 

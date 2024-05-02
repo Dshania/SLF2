@@ -7,7 +7,8 @@ public class AppControls : MonoBehaviour
 {
     public GameObject AppScreen;
     public GameObject ChatterApp;
-    public GameObject Camera;
+    public GameObject EditScreen;
+    public GameObject EditMenu;
     public GameObject Leaderboard;
     public GameObject Bank;
     public GameObject shop;
@@ -15,6 +16,8 @@ public class AppControls : MonoBehaviour
     public GameObject game1;
     public GameObject game2;
     public GameObject phone;
+    public GameObject calculator;
+    public GameObject levelSelect;
     
 
     public void chatterAppBTN()
@@ -23,9 +26,10 @@ public class AppControls : MonoBehaviour
         AppScreen.SetActive(false);
     }
 
-    public void cameraBTN()
+    public void EditBTN()
     {
-        Camera.SetActive(true);
+        EditScreen.SetActive(true);
+        EditMenu.SetActive(true);
         AppScreen.SetActive(false);
     }
 
@@ -54,11 +58,21 @@ public class AppControls : MonoBehaviour
     {
         game1.SetActive(true);
         phone.SetActive(false);
-        Camera.SetActive(false);
+        EditScreen.SetActive(false);
     }
     public void game2BTN()
     {
         game2.SetActive(true);
+        AppScreen.SetActive(false);
+    }
+    public void CalCulAtor()
+    {
+        calculator.SetActive(true);
+        AppScreen.SetActive(false);
+    }
+    public void Levelchoose()
+    {
+        levelSelect.SetActive(true);
         AppScreen.SetActive(false);
     }
     public void NextLevel()

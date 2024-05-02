@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class ItemViewer : MonoBehaviour
+public class ItemViewer : MonoBehaviour, IDragHandler
 {
-    [SerializeField] private ShopInterface shopInventory;
+    public Transform clotheItem;
 
     private void Start()
     {
-        //shopInventory.OnSelected += ShopInventoryItemSelected;
+        clotheItem = GetComponent<Transform>();
     }
-
-    private void ShopInventoryItemSelected(object sender, ItemObject item)
+    public void OnDrag(PointerEventData eventData)
     {
-        Debug.Log(item.name);
+       gameObject.transform.eulerAngles += new Vector3(-eventData.delta.y, -eventData.delta.x);
     }
 }
