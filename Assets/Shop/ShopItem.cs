@@ -18,7 +18,7 @@ public class ShopItem : MonoBehaviour
     void Awake()
     {
         image = transform.GetChild(0).GetComponent<Image>();
-        textPrice.text = "£ " + currentItem.price.ToString();
+        textPrice.text = "ï¿½ " + currentItem.price.ToString();
         saleItem = transform.GetChild(0).GetComponent<GameObject>();
     }
 
@@ -33,14 +33,15 @@ public class ShopItem : MonoBehaviour
         image.sprite = currentItem.uiDisplay;
        
     }
-    public void LoadClothes(ItemObject newItemOBJ)
+    public void LoadClothes(ItemObject newItemOBJ, ItemViewer itemViewer)
     {
         currentItem = newItemOBJ;
-        DisplayItemOBJ();
+        Transform item = DisplayItemOBJ();
+        itemViewer.clotheItem = item.transform;
         Debug.Log(newItemOBJ.name);
     }
 
-    public void DisplayItemOBJ()
+    public Transform DisplayItemOBJ()
     {
         saleItem = currentItem.characterDisplay;
         Quaternion rotation = Quaternion.Euler(0, 180, 0);
@@ -49,7 +50,15 @@ public class ShopItem : MonoBehaviour
         {
             Destroy(saleItem);
         }
-        GameObject obj = Instantiate(saleItem, new Vector3(1000, 1000, 1000), rotation);
-        obj.transform.AddComponent<ItemViewer>();
+        SkinnedMeshRenderer skin = saleItem.GetComponent<SkinnedMeshRenderer>();
+        GameObject obj = new GameObject();
+        obj.name = skin.name;
+        MeshRenderer renderer = obj.AddComponent<MeshRenderer>();
+        MeshFilter filter = obj.AddComponent<MeshFilter>();
+        filter.mesh = skin.sharedMesh;
+        renderer.material = skin.sharedMaterial;
+        obj.transform.position = new Vector3(0, 0, 0);
+        obj.transform.rotation = rotation;
+        return obj.transform;
     }
 }

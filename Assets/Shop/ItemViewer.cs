@@ -7,12 +7,11 @@ public class ItemViewer : MonoBehaviour, IDragHandler
 {
     public Transform clotheItem;
 
-    private void Start()
-    {
-        clotheItem = GetComponent<Transform>();
-    }
     public void OnDrag(PointerEventData eventData)
     {
-       gameObject.transform.eulerAngles += new Vector3(-eventData.delta.y, -eventData.delta.x);
+        if (clotheItem != null)
+        {
+            clotheItem.transform.eulerAngles += new Vector3(-eventData.delta.y, -eventData.delta.x);
+        }
     }
 }
