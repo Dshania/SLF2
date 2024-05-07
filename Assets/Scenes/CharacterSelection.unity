@@ -947,8 +947,8 @@ RectTransform:
   - {fileID: 1097023646}
   - {fileID: 765893852}
   - {fileID: 888947413}
-  - {fileID: 1532527850}
   - {fileID: 602797920}
+  - {fileID: 1532527850}
   - {fileID: 1563809941}
   - {fileID: 253929073110224200}
   m_Father: {fileID: 0}

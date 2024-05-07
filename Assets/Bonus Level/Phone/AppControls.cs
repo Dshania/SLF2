@@ -18,7 +18,6 @@ public class AppControls : MonoBehaviour
     public GameObject phone;
     public GameObject calculator;
     public GameObject levelSelect;
-    
 
     public void chatterAppBTN()
     {
@@ -75,13 +74,20 @@ public class AppControls : MonoBehaviour
         levelSelect.SetActive(true);
         AppScreen.SetActive(false);
     }
-    public void NextLevel()
-    {
-        SceneManager.LoadScene("Level2");
-    }
+   
 
     public void MainMenu()
     {
         SceneManager.LoadScene("Menu");
+    }
+
+    public void Level2()
+    {
+        SceneManager.LoadScene("Level2");
+    }
+
+    public void Level3()
+    {
+        SceneManager.LoadScene("Level3");
     }
 }

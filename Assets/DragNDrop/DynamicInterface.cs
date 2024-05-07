@@ -1,7 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DynamicInterface : UserInterface
 {
@@ -27,10 +30,28 @@ public class DynamicInterface : UserInterface
             AddEvent(obj, EventTriggerType.Drag, delegate { OnDrag(obj); });
 
             inventory.GetSlots[i].slotDisplay = obj;
+            inventory.GetSlots[i].parent = this;
+            
+            if (inventory.GetSlots[i].item != null)
+            { 
+                UpdateSlotImage(inventory.GetSlots[i]);
+            }
 
             slotsOnInterface.Add(obj, inventory.Container.Slots[i]);
         }
     }
+
+    private void UpdateSlotImage(InventorySlot slot)
+    {
+        Debug.Log($"Update {slot.item.Id}");
+        if (slot.item.Id > 0)
+        {
+            slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().sprite = slot.ItemObject.uiDisplay;
+            slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 1);
+            slot.slotDisplay.GetComponentInChildren<TextMeshProUGUI>().text = slot.amount == 1 ? "" : slot.amount.ToString("n0");
+        }
+    }
+
     private Vector3 GetPosition(int i)
     {
         return new Vector3(X_Start + (X_Space * (i % Number_Of_Columns)), Y_Start + (-Y_Space * (i / Number_Of_Columns)), 0f);

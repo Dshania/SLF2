@@ -14,12 +14,13 @@ public class BankApp : MonoBehaviour
     public ScoreSystem scoreSystem;
     private void Start()
     {
-        balance = scoreSystem.TotalScore * 1.3f;
+       // balance = 50f;
+       balance = scoreSystem.TotalScore * 1.2f;
     }
 
     private void Update()
     {
-        balance = scoreSystem.TotalScore * 1.3f;
+       // balance = scoreSystem.TotalScore * 1.3f;
         balanceTXT.text = balance.ToString();
     }
 

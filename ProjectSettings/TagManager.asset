@@ -8,6 +8,7 @@ TagManager:
   - Snake
   - Food
   - Barrier
+  - SaleItem
   layers:
   - Default
   - TransparentFX

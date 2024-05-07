@@ -20,18 +20,36 @@ MonoBehaviour:
     - AllowedItems: 03000000
       item:
         Name: Dress2
-        Id: 8
+        Id: 7
         buffs: []
       amount: 1
     - AllowedItems: 02000000
       item:
         Name: Bottom2
-        Id: 2
+        Id: 1
         buffs: []
       amount: 1
     - AllowedItems: 03000000
       item:
         Name: Dress
-        Id: 7
+        Id: 6
+        buffs: []
+      amount: 1
+    - AllowedItems: 00000000
+      item:
+        Name: hair2
+        Id: 9
+        buffs: []
+      amount: 1
+    - AllowedItems: 04000000
+      item:
+        Name: Shoes3
+        Id: 14
+        buffs: []
+      amount: 1
+    - AllowedItems: 01000000
+      item:
+        Name: Top
+        Id: 16
         buffs: []
       amount: 1

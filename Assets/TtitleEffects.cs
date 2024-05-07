@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine.SceneManagement;
 
 public class TtitleEffects : MonoBehaviour

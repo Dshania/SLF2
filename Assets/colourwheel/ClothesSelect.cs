@@ -4,8 +4,6 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using static UnityEditor.Rendering.CameraUI;
-using static UnityEditor.Rendering.InspectorCurveEditor;
 
 public class ClothesSelect : MonoBehaviour
 {

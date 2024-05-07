@@ -18,7 +18,7 @@ public class shopCrtlScript : MonoBehaviour
     private Coroutine displayURLCor;
 
     public GameObject url;
-
+    public ItemViewer IV;
     private void Start()
     {
         typeWriteEffect();
@@ -61,8 +61,12 @@ public class shopCrtlScript : MonoBehaviour
     }
     public void CloseShop()
     {
-        shop.SetActive(false);
+        if (IV.clotheItem != null)
+        {
+            Destroy(IV.clotheItem.gameObject);
+        }
         AppScreen.SetActive(true);
+        shop.SetActive(false);
     }
 
     IEnumerator DisplayURL(string url)

@@ -11,20 +11,16 @@ using UnityEngine.EventSystems;
 public class ShopItem : MonoBehaviour
 {
     public ItemObject currentItem;
-    private Image image;
-    private TMP_Text textPrice;
-    private GameObject saleItem;
-
-    void Awake()
-    {
-        image = transform.GetChild(0).GetComponent<Image>();
-        textPrice.text = "� " + currentItem.price.ToString();
-        saleItem = transform.GetChild(0).GetComponent<GameObject>();
-    }
+    public Image image;
+    public TMP_Text textPrice;
+   [SerializeField] private GameObject saleItem;
 
     public void LoadNewItem(ItemObject newItem)
     {
         currentItem = newItem;
+        image = transform.GetChild(0).GetComponent<Image>();
+        textPrice.text = "£ " + currentItem.price.ToString();
+        saleItem = transform.GetChild(0).GetComponent<GameObject>();
         DisplayItemIMG();
     }
 
@@ -33,23 +29,23 @@ public class ShopItem : MonoBehaviour
         image.sprite = currentItem.uiDisplay;
        
     }
-    public void LoadClothes(ItemObject newItemOBJ, ItemViewer itemViewer)
+    public void LoadClothes(ItemObject newItemOBJ, ItemViewer itemViewer, int id)
     {
+        if (itemViewer.clotheItem != null)
+        {
+            Destroy(itemViewer.clotheItem.gameObject);
+        }
         currentItem = newItemOBJ;
         Transform item = DisplayItemOBJ();
         itemViewer.clotheItem = item.transform;
+        itemViewer.id = id;
+        itemViewer.price = newItemOBJ.price;
         Debug.Log(newItemOBJ.name);
     }
 
     public Transform DisplayItemOBJ()
     {
         saleItem = currentItem.characterDisplay;
-        Quaternion rotation = Quaternion.Euler(0, 180, 0);
-
-        if (saleItem != null)
-        {
-            Destroy(saleItem);
-        }
         SkinnedMeshRenderer skin = saleItem.GetComponent<SkinnedMeshRenderer>();
         GameObject obj = new GameObject();
         obj.name = skin.name;
@@ -58,7 +54,7 @@ public class ShopItem : MonoBehaviour
         filter.mesh = skin.sharedMesh;
         renderer.material = skin.sharedMaterial;
         obj.transform.position = new Vector3(0, 0, 0);
-        obj.transform.rotation = rotation;
         return obj.transform;
+
     }
 }
