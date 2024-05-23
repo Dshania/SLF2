@@ -12,31 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db10f76357a86d44ead345138db77be3, type: 3}
   m_Name: Top11
   m_EditorClassIdentifier: 
-  uiDisplay: {fileID: 21300000, guid: 0f2a62d3ebefef5408e293bc27cd4e3c, type: 3}
-  characterDisplay: {fileID: -6687504106412162394, guid: fbfadd1810524bf43bd3d2c1ea71d240, type: 3}
+  uiDisplay: {fileID: 21300000, guid: a8d3797313094594faa2b9fdbc33cd8b, type: 3}
+  characterDisplay: {fileID: -6687504106412162394, guid: 88b54070c40bdb5458b5845434f028e5, type: 3}
   stackable: 0
   type: 1
   description: 
   data:
     Name: 
-    Id: 8
+    Id: 41
     buffs:
     - attribute: 0
       value: 0
-      min: 1
-      max: 20
+      min: 50
+      max: 75
     - attribute: 1
       value: 0
-      min: 15
+      min: 50
       max: 60
     - attribute: 2
       value: 0
-      min: 1
-      max: 50
-    - attribute: 3
-      value: 0
-      min: 1
-      max: 20
+      min: 20
+      max: 30
   price: 25
   prefabTransform: {fileID: 0}
   boneNames:

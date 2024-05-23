@@ -17,39 +17,165 @@ MonoBehaviour:
   type: 2
   Container:
     Slots:
-    - AllowedItems: 03000000
-      item:
-        Name: Dress2
-        Id: 7
-        buffs: []
-      amount: 1
     - AllowedItems: 02000000
       item:
-        Name: Bottom2
-        Id: 1
-        buffs: []
-      amount: 1
-    - AllowedItems: 03000000
-      item:
-        Name: Dress
-        Id: 6
+        Name: Bottoms16
+        Id: 55
         buffs: []
       amount: 1
     - AllowedItems: 00000000
       item:
-        Name: hair2
-        Id: 9
+        Name: 
+        Id: 56
         buffs: []
       amount: 1
     - AllowedItems: 04000000
       item:
-        Name: Shoes3
-        Id: 14
+        Name: 
+        Id: 57
         buffs: []
       amount: 1
     - AllowedItems: 01000000
       item:
-        Name: Top
-        Id: 16
+        Name: 
+        Id: 58
+        buffs: []
+      amount: 1
+    - AllowedItems: 02000000
+      item:
+        Name: 
+        Id: 59
+        buffs: []
+      amount: 1
+    - AllowedItems: 00000000
+      item:
+        Name: 
+        Id: 60
+        buffs: []
+      amount: 1
+    - AllowedItems: 04000000
+      item:
+        Name: 
+        Id: 61
+        buffs: []
+      amount: 1
+    - AllowedItems: 01000000
+      item:
+        Name: 
+        Id: 62
+        buffs: []
+      amount: 1
+    - AllowedItems: 02000000
+      item:
+        Name: 
+        Id: 63
+        buffs: []
+      amount: 1
+    - AllowedItems: 00000000
+      item:
+        Name: 
+        Id: 64
+        buffs: []
+      amount: 1
+    - AllowedItems: 04000000
+      item:
+        Name: 
+        Id: 65
+        buffs: []
+      amount: 1
+    - AllowedItems: 02000000
+      item:
+        Name: 
+        Id: 66
+        buffs: []
+      amount: 1
+    - AllowedItems: 00000000
+      item:
+        Name: 
+        Id: 67
+        buffs: []
+      amount: 1
+    - AllowedItems: 04000000
+      item:
+        Name: 
+        Id: 68
+        buffs: []
+      amount: 1
+    - AllowedItems: 01000000
+      item:
+        Name: 
+        Id: 69
+        buffs: []
+      amount: 1
+    - AllowedItems: 02000000
+      item:
+        Name: 
+        Id: 70
+        buffs: []
+      amount: 1
+    - AllowedItems: 01000000
+      item:
+        Name: 
+        Id: 71
+        buffs: []
+      amount: 1
+    - AllowedItems: 02000000
+      item:
+        Name: 
+        Id: 72
+        buffs: []
+      amount: 1
+    - AllowedItems: 01000000
+      item:
+        Name: 
+        Id: 73
+        buffs: []
+      amount: 1
+    - AllowedItems: 02000000
+      item:
+        Name: 
+        Id: 74
+        buffs: []
+      amount: 1
+    - AllowedItems: 00000000
+      item:
+        Name: 
+        Id: 75
+        buffs: []
+      amount: 1
+    - AllowedItems: 01000000
+      item:
+        Name: 
+        Id: 76
+        buffs: []
+      amount: 1
+    - AllowedItems: 00000000
+      item:
+        Name: 
+        Id: 82
+        buffs: []
+      amount: 1
+    - AllowedItems: 01000000
+      item:
+        Name: 
+        Id: 83
+        buffs: []
+      amount: 1
+    - AllowedItems: 01000000
+      item:
+        Name: 
+        Id: 84
+        buffs: []
+      amount: 1
+    - AllowedItems: 01000000
+      item:
+        Name: 
+        Id: 85
+        buffs: []
+      amount: 1
+    - AllowedItems: 00000000
+      item:
+        Name: 
+        Id: 80
         buffs: []
       amount: 1

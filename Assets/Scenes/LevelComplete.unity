@@ -11488,6 +11488,7 @@ GameObject:
   - component: {fileID: 1187797479}
   - component: {fileID: 1187797478}
   - component: {fileID: 1187797480}
+  - component: {fileID: 1187797482}
   - component: {fileID: 1187797481}
   m_Layer: 5
   m_Name: Text (TMP)
@@ -11512,7 +11513,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -31}
+  m_AnchoredPosition: {x: 0, y: -30}
   m_SizeDelta: {x: 55, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1187797478
@@ -11619,14 +11620,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187797476}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc040c6742f22724083270e8c7ce404c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveTime: 2
   speed: 200
-  textMeshPro: {fileID: 1187797478}
 --- !u!50 &1187797481
 Rigidbody2D:
   serializedVersion: 4
@@ -11654,6 +11654,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1187797482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187797476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300f2eccfed901c45bad7665892a5139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  size: 150
 --- !u!224 &1387947958 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2110243470697880454, guid: b886f5b6412a90f46b37480637f1159e, type: 3}

@@ -15,24 +15,39 @@ public class LeaderBoard : MonoBehaviour
     private List<Transform> HSEntryTransList;
     public float totalScore;
 
-   public ScoreSystem scoreSystem;
+    public ScoreSystem scoreSystem;
+    public List<string> names = new List<string>();
 
     private void Awake()
     {
         totalScore = scoreSystem.TotalScore;
         HSTemplate.gameObject.SetActive(false);
+        names.Add("Shania");
+        names.Add("Jayden");
+        names.Add("Olivia");
+        names.Add("Paige");
+        names.Add("Myles");
+        names.Add("Mykah");
+        names.Add("Nia");
+        names.Add("Destiny");
+        names.Add("Luis");
+        names.Add("Reason");
+        names.Add("Marton");
+        names.Add("Abi");
+        names.Add("Iman");
+        names.Add("L'shea");
 
         HSEntryList = new List<HSEntry>()
             { new HSEntry { score = totalScore, name = "YOU"},
-             new HSEntry { score = Random.Range(0, 1000), name = RandomNameGen()},
-                  new HSEntry { score = Random.Range(0, 1000), name = RandomNameGen()},
-                       new HSEntry { score = Random.Range(0, 1000), name = RandomNameGen()},
-                            new HSEntry { score = Random.Range(0, 1000), name = RandomNameGen()},
-                                 new HSEntry { score = Random.Range(0, 1000), name = RandomNameGen()},
-                                      new HSEntry { score = Random.Range(0, 1000), name = RandomNameGen()},
-                                           new HSEntry { score = Random.Range(0, 1000), name = RandomNameGen()},
-                                                new HSEntry { score = Random.Range(0, 1000), name = RandomNameGen()},
-                                                     new HSEntry { score = Random.Range(0, 1000), name = RandomNameGen()},
+             new HSEntry { score = Random.Range(0, 200), name = RandomNameGen()},
+                  new HSEntry { score = Random.Range(0, 200), name = RandomNameGen()},
+                       new HSEntry { score = Random.Range(0, 200), name = RandomNameGen()},
+                            new HSEntry { score = Random.Range(0, 200), name = RandomNameGen()},
+                                 new HSEntry { score = Random.Range(0, 200), name = RandomNameGen()},
+                                      new HSEntry { score = Random.Range(0, 200), name = RandomNameGen()},
+                                           new HSEntry { score = Random.Range(0, 200), name = RandomNameGen()},
+                                                new HSEntry { score = Random.Range(0, 200), name = RandomNameGen()},
+                                                     new HSEntry { score = Random.Range(0, 200), name = RandomNameGen()},
             };
 
         /*        for (int i = 0; i < 10; i++)
@@ -89,16 +104,25 @@ public class LeaderBoard : MonoBehaviour
         Debug.Log(PlayerPrefs.GetString("LeaderBoardTable"));
     }
 
-    private string RandomNameGen()
+    private string RandomWordGen()
     {
         int _stringLength = UnityEngine.Random.Range(2, 5);
         string randomString = "";
-        string[] characters = new string[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
+        string[] characters = new string[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "r", "s", "t", "u", "v", "w", "y", "z" };
         for (int i = 0; i < _stringLength; i++)
         {
             randomString = randomString + characters[UnityEngine.Random.Range(0, characters.Length)];
         }
        return randomString;
+    }
+
+
+    private string RandomNameGen()
+    {       
+        int index = Random.Range(0, names.Count);
+        string randomName = names[index];
+        names.RemoveAt(index);
+        return randomName;
     }
 
     private void CreatedHSTrans(HSEntry HSEntry, Transform container, List<Transform> transformList)

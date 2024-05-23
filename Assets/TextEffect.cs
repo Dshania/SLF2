@@ -1,4 +1,4 @@
-using System;
+
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -10,13 +10,11 @@ public class TextEffect : MonoBehaviour
     public float moveTime;
     public float speed;
     private Vector3 moveDirection;
-    public TextMeshProUGUI textMeshPro;
 
     private void Start()
     {
         StartCoroutine(RandomMovement());
     }
-
     private IEnumerator RandomMovement()
     {
         moveDirection = UnityEngine.Random.insideUnitCircle.normalized;

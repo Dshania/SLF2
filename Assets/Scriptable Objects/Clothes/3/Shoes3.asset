@@ -12,31 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db10f76357a86d44ead345138db77be3, type: 3}
   m_Name: Shoes3
   m_EditorClassIdentifier: 
-  uiDisplay: {fileID: 21300000, guid: 14aa65c2a5a0ee844bb03e5df1bbf71c, type: 3}
-  characterDisplay: {fileID: -3286910004361259421, guid: d6e4bf55bcc4a2f4eb450496135093c4, type: 3}
+  uiDisplay: {fileID: 21300000, guid: f8e57192428176c44b5d3e616ff5f190, type: 3}
+  characterDisplay: {fileID: -3286910004361259421, guid: fb158be94be8b284cbc870f7029d6a26, type: 3}
   stackable: 0
   type: 4
   description: 
   data:
     Name: 
-    Id: 15
+    Id: 9
     buffs:
     - attribute: 0
       value: 0
-      min: 15
+      min: 30
       max: 50
     - attribute: 1
       value: 0
-      min: 10
-      max: 50
+      min: 1
+      max: 5
     - attribute: 2
       value: 0
-      min: 1
+      min: 20
       max: 50
-    - attribute: 3
-      value: 0
-      min: 1
-      max: 20
+  price: 40
+  prefabTransform: {fileID: 0}
   boneNames:
   - mixamorig:Hips
   - mixamorig:Spine

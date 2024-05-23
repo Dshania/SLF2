@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db10f76357a86d44ead345138db77be3, type: 3}
   m_Name: Mask
   m_EditorClassIdentifier: 
-  uiDisplay: {fileID: 21300000, guid: cf92aa0b2be9c88438d4ca5541924baf, type: 3}
+  uiDisplay: {fileID: 21300000, guid: 865debd7f2434dc42ae1a80f71bcd086, type: 3}
   characterDisplay: {fileID: 4833187383745679961, guid: 77e5924fd65fad746a34ba2edeebebda, type: 3}
-  stackable: 1
+  stackable: 0
   type: 0
   description: 
   data:
     Name: 
-    Id: 2
+    Id: 1
     buffs:
     - attribute: 0
       value: 0

@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db10f76357a86d44ead345138db77be3, type: 3}
   m_Name: Top4
   m_EditorClassIdentifier: 
-  uiDisplay: {fileID: 21300000, guid: b42f974f790561345b35a0422065c6f9, type: 3}
-  characterDisplay: {fileID: -6687504106412162394, guid: 6afaaf81f30422a4fafad33beb1f746f, type: 3}
+  uiDisplay: {fileID: 21300000, guid: 0bb121002bbe3ed4ba8e326e3891d27d, type: 3}
+  characterDisplay: {fileID: -6687504106412162394, guid: 7b84353c76b8d0846b448fc8f3239051, type: 3}
   stackable: 0
   type: 1
   description: 
   data:
     Name: 
-    Id: 20
+    Id: 14
     buffs:
     - attribute: 0
       value: 0
@@ -27,16 +27,14 @@ MonoBehaviour:
       max: 50
     - attribute: 1
       value: 0
-      min: 20
-      max: 60
+      min: 60
+      max: 80
     - attribute: 2
       value: 0
-      min: 1
+      min: 40
       max: 50
-    - attribute: 3
-      value: 0
-      min: 1
-      max: 20
+  price: 18
+  prefabTransform: {fileID: 0}
   boneNames:
   - mixamorig:Hips
   - mixamorig:Spine

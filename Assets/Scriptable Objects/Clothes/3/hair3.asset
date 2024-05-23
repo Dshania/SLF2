@@ -12,31 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db10f76357a86d44ead345138db77be3, type: 3}
   m_Name: hair3
   m_EditorClassIdentifier: 
-  uiDisplay: {fileID: 21300000, guid: 3f34fc111d7bc71449e1721696f7d174, type: 3}
-  characterDisplay: {fileID: -6452266432751415832, guid: 22ab5a24ec6711a4f8ef136bca794954, type: 3}
+  uiDisplay: {fileID: 21300000, guid: 327cded3308b2a24688fb4b22ee7283f, type: 3}
+  characterDisplay: {fileID: -6452266432751415832, guid: fb158be94be8b284cbc870f7029d6a26, type: 3}
   stackable: 0
   type: 0
   description: 
   data:
     Name: 
-    Id: 11
+    Id: 8
     buffs:
     - attribute: 0
       value: 0
-      min: 20
-      max: 50
+      min: 40
+      max: 70
     - attribute: 1
       value: 0
-      min: 20
-      max: 50
+      min: 70
+      max: 80
     - attribute: 2
       value: 0
-      min: 1
-      max: 50
-    - attribute: 3
-      value: 0
-      min: 1
-      max: 20
+      min: 40
+      max: 70
+  price: 20
+  prefabTransform: {fileID: 0}
   boneNames:
   - mixamorig:Hips
   - mixamorig:Spine

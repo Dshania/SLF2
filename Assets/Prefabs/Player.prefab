@@ -111,11 +111,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 3048756264940941775}
   m_SourcePrefab: {fileID: 100100000, guid: 7f459c9406d3fc94d8f8f067971b68cc, type: 3}
---- !u!4 &2223000303405555866 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8700783698680967558, guid: 7f459c9406d3fc94d8f8f067971b68cc, type: 3}
-  m_PrefabInstance: {fileID: 7378807500133470492}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7685291069004360781 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7f459c9406d3fc94d8f8f067971b68cc, type: 3}
@@ -216,11 +211,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc75b6803a47394f92e05459c251f88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UpdatePoints:
+    m_PersistentCalls:
+      m_Calls: []
   attributes:
-  - type: 0
+  - type: 1
     value:
       baseValue: 0
       modifiedValue: 0
+  scoreText: {fileID: 0}
+  scoreTotal: 0
+  scoreSystem: {fileID: 0}
+  spiralPart: {fileID: 0}
 --- !u!114 &3048756264940941775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,4 +235,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1dde9c41bb65f40ab109cf1ad94295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hairTransform: {fileID: 2223000303405555866}
